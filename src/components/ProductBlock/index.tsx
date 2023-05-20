@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import React from 'react'
 import { selectCart } from "../../Redux/cart/selectors";
 import { Link } from "react-router-dom";
+import { CartItemType } from "../../Redux/cart/types";
+import { addItem } from "../../Redux/cart/slice";
 
 type ProductBlockProps = {
   id: string;
@@ -9,8 +11,8 @@ type ProductBlockProps = {
   prices: number[];
   imageUrl: string;
   sizes: string[];
-  classification?: string;
-  structure?: string;
+  classification: string;
+  structure: string;
 }
 
 export const ProductBlock: React.FC<ProductBlockProps> = ({ id, title, prices, imageUrl, sizes, classification, structure }) => {
@@ -21,12 +23,26 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ id, title, prices, i
   const [activePrice, setActivePrice] = React.useState(0);
 
   const { items } = useSelector(selectCart);
-  const test = items.filter((item: any) => item.id === id);
-  const totalCount = test.reduce((sum: number, item: any) => sum + item.count, 0);
+  const count = items.filter((item: any) => item.id === id);
+  const totalCount = count.reduce((sum: number, item: CartItemType) => sum + item.count, 0);
 
   const onClickChooseSize = (idx: number) => {
     setActiveSize(idx);
     setActivePrice(idx);
+  };
+
+  const onClickAdd = () => {
+    const item: CartItemType = {
+      id,
+      title,
+      price: prices[activePrice],
+      imageUrl,
+      size: sizes[activeSize],
+      classification: classification,
+      structure: structure,
+      count: 0
+    };
+    dispatch(addItem(item));
   };
 
   return (
@@ -53,7 +69,7 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ id, title, prices, i
         <div className="product-block__bottom">
         <div className="product-block__price">от {prices[activePrice]} ₽
           </div>
-          <button className="button button--outline button--add">
+          <button className="button button--outline button--add" onClick={onClickAdd}>
             <svg
               width="12"
               height="12"

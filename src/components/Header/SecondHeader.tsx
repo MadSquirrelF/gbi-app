@@ -1,7 +1,22 @@
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import React from 'react';
+import { selectCart } from '../../Redux/cart/selectors';
+import { useEffect, useRef } from 'react';
 
 function SecondHeader() {
+
+  const { items } = useSelector(selectCart);
+  const isMounted = useRef(false);
+
+  const totalCount = items.reduce((sum: number, item: any) => sum + item.count, 0);
+
+  useEffect(() => {
+    if (isMounted.current) {
+      const json = JSON.stringify(items);
+      localStorage.setItem('cart', json);
+    }
+    isMounted.current = true;
+  }, [items]);
 
   return (
     <div className='secondheader'>
@@ -50,7 +65,7 @@ function SecondHeader() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span>0</span>
+              <span>{totalCount}</span>
             </div>
           </Link>
         </div>

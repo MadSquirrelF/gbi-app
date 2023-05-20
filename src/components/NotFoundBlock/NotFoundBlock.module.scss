@@ -1,0 +1,22 @@
+.root{
+  text-align: center;
+  padding: 100px;
+  max-width: 750px;
+  margin: 0 auto;
+  
+  img{
+    height:300px;
+    width: 300px;
+    
+  }
+}
+@media (max-width: 550px){
+  .root{
+    padding: 30px;
+    img{
+      height:150px;
+    width: 150px;
+      
+    }
+  }
+}
