@@ -1,0 +1,167 @@
+[
+  {
+   "id": "0",
+   "imageUrl": "https://sun9-37.userapi.com/impg/T0J61I3g14XP8oId8saCqL0i2K6_HqQ0o2Qctg/4Y7ecvHJnPI.jpg?size=800x400&quality=95&sign=42729125a0a0aba494328e6dbe6086cf&type=album",
+   "title": "Кольцо с дном",
+   "sizes": [
+    "30*30*20",
+    "50*50*30"
+   ],
+   "prices": [
+    3500,
+    4500
+   ],
+   "category": 1,
+   "rating": 4,
+   "classification": "Объемные",
+   "structure": "Бетон"
+  },
+  {
+    "id": "1",
+    "imageUrl": "https://sun9-72.userapi.com/impg/UenZ1_s5qvOZc8vI18h0rZIKZip5RDpGI3YiwA/G6qXi5CC43k.jpg?size=515x463&quality=95&sign=e1c877083ac1e694a74d6ae4e125fd55&type=album",
+    "title": "Труба водосточная",
+    "sizes": [
+     "100*20*10",
+     "120*50*15",
+     "180*50*15"
+    ],
+    "prices": [
+     3000,
+     4000,
+     5000
+    ],
+    "category": 7,
+    "rating": 5,
+    "classification": "Объемные",
+    "structure": "Бетон"
+   },
+   {
+    "id": "2",
+    "imageUrl": "https://sun9-12.userapi.com/impg/Gzmi2nBASLv-I51jyEbeFe9O5aK6fC1Kpp8x1A/AnUynSihS54.jpg?size=755x755&quality=95&sign=c300779ea9152b2a2ca2954e13955905&type=album",
+    "title": "Лестница железнобетонная",
+    "sizes": [
+     "100*35*100",
+     "200*50*200"
+    ],
+    "prices": [
+     9000,
+     10000
+    ],
+    "category": 5,
+    "rating": 3,
+    "classification": "Объемные",
+    "structure": "Бетон"
+   },
+   {
+    "id": "3",
+    "imageUrl": "https://sun9-46.userapi.com/impg/k3XGrjnI5_zp4Akw_4C2hAkngaTHc-8j20k4LA/YOllKxE1nKc.jpg?size=457x320&quality=95&sign=4a1fe1cd39ab079762feafb99c5f46c3&type=album",
+    "title": "Энергостойка",
+    "sizes": [
+     "50*50*320",
+     "50*50*480"
+    ],
+    "prices": [
+     7000,
+     11000
+    ],
+    "category": 6,
+    "rating": 4,
+    "classification": "Объемные",
+    "structure": "Бетон"
+   },
+   {
+    "id": "4",
+    "imageUrl": "https://sun9-71.userapi.com/impg/JYAp08FVf12zi5ryuRJ9x-BxHu4X395N3e80Zw/5iUuSG6DDZc.jpg?size=920x651&quality=95&sign=da4e06adaded3e937295c78cae212799&type=album",
+    "title": "Блок железнобетонный",
+    "sizes": [
+     "50*50*50",
+     "58*28*40",
+     "78*58*40"
+    ],
+    "prices": [
+     800,
+     850,
+     1000
+    ],
+    "category": 3,
+    "rating": 10,
+    "classification": "Объемные",
+    "structure": "Бетон"
+   }
+   ,
+   {
+    "id": "5",
+    "imageUrl": "https://sun9-20.userapi.com/impg/vSRFTCUdwBahlhcJdNwa4xhdtQag21ZTNnPpJA/ewt8BLrpe2E.jpg?size=700x700&quality=95&sign=049f33959631127ab368612b1ec71a57&type=album",
+    "title": "Балка ПТ-43",
+    "sizes": [
+     "250*30*20",
+     "350*50*20"
+    ],
+    "prices": [
+     9500,
+     12000
+    ],
+    "category": 4,
+    "rating": 7,
+    "classification": "Объемные",
+    "structure": "Бетон"
+   }
+   ,
+   {
+    "id": "6",
+    "imageUrl": "https://sun9-51.userapi.com/impg/o_F6Fjhutu_zVGY3R7DHBgsrKNM8LzCPD3Z39w/5s0AdzZppqk.jpg?size=800x533&quality=95&sign=87acc8e6c10e59809268cd9ee01f107e&type=album",
+    "title": "Кольцо с крышкой",
+    "sizes": [
+     "30*30*20",
+     "50*50*30"
+    ],
+    "prices": [
+     3000,
+     4000
+    ],
+    "category": 1,
+    "rating": 9,
+    "classification": "Объемные",
+    "structure": "Бетон"
+   }
+   ,
+   {
+    "id": "7",
+    "imageUrl": "https://sun9-65.userapi.com/impg/RzInAjHsF_JiCgjeY5W-gUM0HR1BRm3fAfrcFQ/azwmHRO3rB8.jpg?size=480x203&quality=95&sign=4096fd99e51e6fbf40939ee6152db9c5&type=album",
+    "title": "Плита аэродромная",
+    "sizes": [
+     "400*90*10",
+     "500*100*14",
+     "600*200*14"
+    ],
+    "prices": [
+     20000,
+     26000,
+     28000
+    ],
+    "category": 2,
+    "rating": 5,
+    "classification": "Объемные",
+    "structure": "Бетон"
+   }
+   ,
+   {
+    "id": "8",
+    "imageUrl": "https://sun9-10.userapi.com/impg/JNaTUGZsqQcERgrVA-8448RGYrYMyjkhP_CQnQ/H4tkRr6-4hw.jpg?size=800x800&quality=95&sign=100b616c1931b34fd8a028a6495aba4f&type=album",
+    "title": "Плита-перекрытие",
+    "sizes": [
+     "100*100*20",
+     "200*100*25",
+     "400*200*30"
+    ],
+    "prices": [
+     15000,
+     19000,
+     21000
+    ],
+    "category": 2,
+    "rating": 3,
+    "classification": "Объемные",
+    "structure": "Бетон"
+   }
+]

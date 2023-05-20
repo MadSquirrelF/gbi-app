@@ -13,7 +13,7 @@ const Up: React.FC<UpProps> = ({ value, handleUpButton }) => {
   return (
     <div className={value < 300 ? styles.root : styles.show}
       onClick={() => handleUpButton()}>
-      <span>↑</span>
+      <span>🚀</span>
     </div>
   )
 }

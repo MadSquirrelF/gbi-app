@@ -18,9 +18,26 @@
     font-size: 30px;
     transform: rotate(-46deg);
   }
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
 }
 .show {
   opacity: 1;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+  
   transition: transform 0.2s ease-in-out;
   background-color: white;
   position: fixed;
@@ -37,11 +54,11 @@
   border: 2px solid $orange;
   filter: drop-shadow(-2px 2px  3px black);
   &:hover{
-    background-color: rgb(253, 230, 186);
+    background-color: #89f8f4;
   }
   &:active{
     transform: translateY(3px);
-    background-color:rgb(250, 210, 135);
+    background-color:#00f7ee;
   }
   
   span{
