@@ -3,6 +3,86 @@
 .header {
   border-bottom: 1px solid $light-gray;
 
+  &__submit-btn {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+      font-size: 36px;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  &__error {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__input {
+    width: 100%;
+    color: $text-gray;
+
+    &::placeholder {
+      color: $text-gray;
+    }
+
+    &[type="password"] {
+      &::placeholder {
+        color: $text-gray;
+      }
+    }
+  }
+
+  &__password-switch-btn {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__field-box {
+    position: relative;
+    margin-bottom: 56px;
+    width: 100%;
+    text-align: left;
+
+    &:first-child {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+    outline: 1px solid $text-gray;
+    border-radius: 6px;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    color: $text-gray;
+    transition: all 0.5s;
+
+    &:focus-within {
+      outline: 2px solid $orange;
+    }
+
+    &--password {
+      padding: 16px 45px 16px 16px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    color: $text-gray;
+  }
+
   .container {
     display: flex;
     align-items: center;
@@ -63,9 +143,13 @@
           padding: 13px 10px 10px 0px;
           margin-right: 10px;
           cursor: pointer;
-          &:hover {
-            color: $orange;
+
+          a {
+            &:hover {
+              color: $orange;
+            }
           }
+          
         }
       }
     }

@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { selectCart } from '../../Redux/cart/selectors';
 import { useEffect, useRef } from 'react';
-
+import { HashLink } from 'react-router-hash-link';
 function SecondHeader() {
 
   const { items } = useSelector(selectCart);
@@ -23,9 +23,12 @@ function SecondHeader() {
       <div className='container'>
         <div className='navbar'>
           <ul>
-            <li>Главная</li>
-            <li>Каталог</li>
-            <li>Контакты</li>
+            <li>
+              <Link to={'/'}>Главная</Link>
+            </li>
+            <li>
+              <HashLink smooth to={'/#catalog'}>Каталог</HashLink>
+            </li>
           </ul>
         </div>
 

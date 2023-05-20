@@ -12,6 +12,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+input {
+  all: unset;
+}
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -54,4 +58,25 @@ a {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
+}
+
+@mixin reset-button() {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+@mixin reset-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin icon($height, $width, $color) {
+  position: relative;
+  width: $width;
+  height: $height;
+  line-height: 0;
+  color: $color;
+  transition: all 0.5s;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearItems } from '../Redux/cart/slice';
@@ -6,17 +6,33 @@ import { selectCart } from '../Redux/cart/selectors';
 import { CartEmpty } from '../components/CartEmpty';
 import { CartItem } from '../components/CartItem';
 import { CartItemType } from '../Redux/cart/types';
+import Modal from '../components/Modal/Modal';
 
 const Cart: React.FC = () => {
   // const items = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
+  const [modalActive, setModalActive] = useState(false);
+
   const { totalPrice, items } = useSelector(selectCart);
   const totalCount = items.reduce((sum: number, item:CartItemType ) => sum + item.count, 0);
+
+  const [street, setStreet] = useState(``);
+  const [payment, setPayment] = useState(``);
+
+  const isStreetInvalid = !street || !street.length;
+  const isPaymentInvalid = !payment || !payment.length;
 
   const onClickClear = () => {
     dispatch(clearItems());
   };
+
+  const endPayment = () => {
+    setModalActive(false);
+    onClickClear()
+    
+    alert('Ваш заказ успешно оформлен! Ожидание подтверждения...');
+  }
 
   if (!totalPrice) {
     return <CartEmpty />;
@@ -24,6 +40,61 @@ const Cart: React.FC = () => {
 
   return (
     <div className="container container--cart">
+      <Modal active={modalActive} setActive={setModalActive}>
+          <h1>Оформление заказа</h1>
+          <p>Вам необходимо указать адрес доставки и способ оплаты</p>
+          <form className="header__form" onSubmit={endPayment}>
+              <div className="header__field-box">
+                  <label
+                    className="header__label"
+                    htmlFor="street"
+                  >
+                    Улица и дом
+                  </label>
+                  <div className="header__input-wrapper">
+                    <input
+                      type="text"
+                      className="header__input"
+                      placeholder="Введите улицу и дом"
+                      id="street"
+                      name="street"
+                      value={street}
+                      required
+                      onChange={(e) => setStreet(e.target.value.trim())}
+                    />
+                  </div>
+            </div>
+            <div className="header__field-box">
+                  <label
+                    className="header__label"
+                    htmlFor="payment"
+                  >
+                    Способ оплаты
+                  </label>
+                  <div className="header__input-wrapper">
+                    <input
+                      type="text"
+                      className="header__input"
+                      placeholder="Введите способ оплаты"
+                      id="payment"
+                      name="payment"
+                      value={payment}
+                      required
+                      onChange={(e) => setPayment(e.target.value.trim())}
+                    />
+                  </div>
+            </div>
+
+            <button
+              type="submit"
+              className="btn btn--bright header__submit-btn"
+              disabled={isStreetInvalid || isPaymentInvalid}
+            
+            >
+               <h4 style={{color: 'white'}}>Оплатить</h4>
+            </button>
+          </form>
+      </Modal>
       <div className="cart">
         <div className="cart__top">
           <h2 className="content__title">
@@ -124,8 +195,8 @@ const Cart: React.FC = () => {
 
               <span>Вернуться назад</span>
             </Link>
-            <div className="button pay-btn">
-              <span>Оплатить сейчас</span>
+            <div className="button pay-btn" onClick={() => setModalActive(true)}>
+              <span>Оформить заказ</span>
             </div>
           </div>
         </div>

@@ -105,7 +105,7 @@ const Home: FC = () => {
             <img src={mainImage} alt="mainImage" draggable={false} />
           </div>
       </div>
-      <div className="search_container">
+      <div className="search_container" id='catalog'>
         <div>
           <h2 className="content__title">Наши ЖБИ изделия</h2>
           <p>Наща миссия: мы создаем комфортную среду, которая помогает людям в полной мере раскрыть свой потенициал и реализовать свои устревления</p>

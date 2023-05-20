@@ -37,8 +37,9 @@ export const CartItem: React.FC<CartItemProps> = ({ id, title, size, price, coun
       </div>
       <div className="cart__item-info">
         <h3>{title}</h3>
-        <p>{classification} классификация, {structure} состав</p>
-        <p>{size} см.</p>
+        <p>Классификация: <span>{classification}</span>,</p>
+        <p>Cостав: <span>{structure}</span>,</p>
+        <p>Размер: <span>{size}</span> см.</p>
       </div>
       <div className="cart__item-count">
         <button disabled={count === 1} onClick={onClickMinus} className="button button--outline button--circle cart__item-count-minus">

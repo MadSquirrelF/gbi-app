@@ -408,8 +408,18 @@ html::-webkit-scrollbar-thumb {
       .pay-btn {
         font-size: 16px;
         font-weight: 600;
+        
         width: 210px;
         padding: 16px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        h5 {
+          color: white;
+          font-size: 16px;
+          font-weight: 600;
+        }
       }
     }
   }
