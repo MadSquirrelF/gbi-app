@@ -11,11 +11,11 @@ import { selectFilter } from '../../Redux/filter/selectors';
 import { setCategoryId } from '../../Redux/filter/slice';
 import { fetchProducts } from '../../Redux/product/asyncActions';
 import qs from 'qs';
-import ErrorSticker from '../../assets/images/error.png';
+import ErrorSticker from '../../assets/images/waiting.jpg';
 import { ProductBlock } from '../../components/ProductBlock';
 import Search from '../../components/Search';
 import { Skeleton } from '../../components/ProductBlock/Skeleton';
-import emptyProduct from '../../assets/images/empty-product.png';
+import emptyProduct from '../../assets/images/search.jpg';
 
 const Home: FC = () => {
 
@@ -70,6 +70,7 @@ const Home: FC = () => {
     window.scrollTo(0, scroll);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoryId, sortType, searchValue]);
+
 
 
   useEffect(() => {
@@ -127,7 +128,7 @@ const Home: FC = () => {
             <br />
             Попробуйте повторить попытку!
           </p>
-          <img src={ErrorSticker} alt="Error products" />
+          <img src={ErrorSticker} alt="Error products"  width={400} draggable={false}/>
         </div>
         ) : status === 'loading' ? (
           <div className="content__items">
@@ -141,7 +142,7 @@ const Home: FC = () => {
           <p>
             Попробуйте выбрать что-то другое!
           </p>
-          <img src={emptyProduct} alt="empty products" />
+          <img src={emptyProduct} alt="empty products" width={400} draggable={false} />
         </div>
         )
       }

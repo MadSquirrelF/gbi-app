@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Product } from '../Redux/product/types';
 
 const FullProduct: React.FC = () => {
   const [product, setProducts] = React.useState<{
@@ -16,10 +17,10 @@ const FullProduct: React.FC = () => {
   React.useEffect(() => {
     async function fetchProduct() {
       try {
-        const { data } = await axios.get('https://62f02dcbe2bca93cd2345814.mockapi.io/api/products' + id);
+        const { data } = await axios.get<Product>(`https://63f31aa3864fb1d6000f5375.mockapi.io/api/products/` + id);
         setProducts(data);
       } catch (error) {
-        alert('Ошибка при получении пиццы!');
+        alert('Ошибка при получении товара!');
         navigate('/');
       }
     }
@@ -34,9 +35,9 @@ const FullProduct: React.FC = () => {
   return (
     <div className="container">
       <img src={product.imageUrl} alt="img product" />
-      <h2>{product.title}</h2>
-      <Link to="/">
-        <button className="button button--outline button--add">
+      <h2 >{product.title}</h2>
+      <Link to="/" >
+        <button className="button button--outline button--add" style={{marginTop: '50px'}}>
           <span>Назад</span>
         </button>
       </Link>

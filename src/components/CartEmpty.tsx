@@ -1,5 +1,5 @@
 import React from 'react';
-import Lichinus from '../assets/images/NotFound.png';
+import emptyBusket from '../assets/images/emptyBusket.jpg';
 import { Link } from 'react-router-dom';
 
 export const CartEmpty: React.FC = () => {
@@ -10,11 +10,11 @@ export const CartEmpty: React.FC = () => {
           Корзина пустая <i>😕</i>
         </h2>
         <p>
-          Вероятней всего, вы не заказывали ещё пиццу.
+          Вероятней всего, вы не заказывали ещё ничего.
           <br />
-          Для того, чтобы заказать пиццу, перейди на главную страницу.
+          Для того, чтобы заказать товар, перейди на главную страницу в раздел каталог.
         </p>
-        <img src={Lichinus} alt="Empty cart" />
+        <img src={emptyBusket} alt="Empty cart" />
         <Link to="/" className="button button--black">
           <span>Вернуться назад</span>
         </Link>
